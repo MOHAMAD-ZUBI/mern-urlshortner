@@ -16,7 +16,7 @@
   <li><strong>Frontend:</strong> Next.js, React, Axios</li>
   <li><strong>Backend:</strong> Node.js, Express.js, MongoDB</li>
   <li><strong>Styling:</strong> TailwindCSS</li>
-  <li><strong>Deployment:</strong> Heroku (for the backend), Vercel (for the frontend)</li>
+  <li><strong>Deployment:</strong> LocalHost :D</li>
 </ul>
 
 <h2>Setup</h2>
