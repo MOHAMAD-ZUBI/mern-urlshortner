@@ -15,7 +15,11 @@ function generateRandomCode() {
 
   const createUrl = async(req,res) => {
         try {
-            const shortUrl = generateRandomCode();
+            let {shortUrl} = req.body
+            if(!shortUrl){
+              shortUrl = generateRandomCode();
+            }
+             
             const existingUrl = await UrlShortner.findOne({ shortUrl });
 
             if (!existingUrl) {
@@ -33,8 +37,8 @@ function generateRandomCode() {
 
   const getUrl = async (req, res) => {
     try {
-      const { shortUrl } = req.query; 
-      const existingUrl = await UrlShortner.findOne({ shortUrl }); 
+      const { shortUrl } = req.params; 
+      const existingUrl = await UrlShortner.findOne({ shortUrl });
   
       if (!existingUrl) {
         return res.status(404).json({ error: "URL not found" });
@@ -43,9 +47,11 @@ function generateRandomCode() {
       const destination = existingUrl.longUrl;
       return res.status(302).redirect(destination);
     } catch (error) {
-      return res.status(500).json({ error: error.message }); 
+      return res.status(500).json({ error: error.message });
     }
   };
+  
+
   
 
   const test = async(req,res) => {
