@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/create', createUrl)
 router.get('/test',test)
-router.get('/',getUrl)
+router.get('/:shortUrl',getUrl)
 
 
 module.exports = router
