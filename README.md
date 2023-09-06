@@ -36,7 +36,7 @@
 </ol>
 
 <h2>Screenshots</h2>
-![Homepage Screenshot](https://prnt.sc/OxaceVkRznlZ)
+<img src="https://github.com/MOHAMAD-ZUBI/mern-urlshortner/blob/main/shortnerImg.png" alt="home page" />
 
 <h2>License</h2>
 <p>This project is open for everyone to use :).</p>
